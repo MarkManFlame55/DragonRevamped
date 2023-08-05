@@ -1,7 +1,0 @@
-name: DragonRevamped
-version: '$1.0'
-main: org.markmanflame55.dragonrevamped.DragonRevamped
-api-version: '1.20'
-commands:
-  dragon:
-    description: Utils for Dragon Fight
