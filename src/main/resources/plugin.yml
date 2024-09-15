@@ -1,0 +1,8 @@
+name: DragonRevamped
+version: '${version}'
+main: net.espectralgames.dragonrevamped.DragonRevamped
+api-version: '1.21'
+author: MarkManFlame_55
+commands:
+  dragon:
+    description: Comando principal del Dragon Revamp

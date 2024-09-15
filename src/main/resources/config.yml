@@ -1,0 +1,34 @@
+#
+# Dragon Revamped plugin by MarkManFlame_55
+#
+
+
+# Si es TRUE: La primera batalla contra el dragon sera la del plugin.
+# SI es FALSE: El jugador tendra que hacer /dragon enable para que la proxima batalla contra el dragon sea la del plugin
+custom-fight-by-default: true
+
+# Nombre del dragon que se mostrará en la boss bar en las diferentes fases
+# Link para previsualizar nombres: https://webui.advntr.dev/
+dragon-name-stage-1: '<light_purple><b>Ender Dragon'
+dragon-name-stage-2: '<light_purple><b>ENRAGED ENDER DRAGON'
+dragon-name-stage-3: '<dark_red><b>FINAL ENDER DRAGON'
+
+# Vida del dragon y a partir de que vida cambia de fase
+max-dragon-health: 1000
+health-to-stage-2: 650
+health-to-stage-3: 350
+
+# Ataques y Fases del dragon
+
+attack-timer: 15 # Tiempo (en segundos) entre intentos de ataque del dragon
+
+## Probabilidades de que el Dragon acierte un ataque en sus distintas fases
+## en % (Valores desde 1 a 100)
+
+attack-chance-stage-1: 33 # % en la Fase 1
+attack-chance-stage-2: 70 # % en la Fase 2
+attack-chance-stage-3: 100 # % en la Fase 3
+
+
+
+
