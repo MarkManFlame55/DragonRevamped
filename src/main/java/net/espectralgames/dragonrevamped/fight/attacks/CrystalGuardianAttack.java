@@ -46,7 +46,7 @@ public class CrystalGuardianAttack extends Attack {
         spawn.setZ(spawn.getZ() + random.nextInt(-16, 17));
         spawn.setY(world.getHighestBlockYAt((int) spawn.getX(), (int) spawn.getZ()));
 
-        Enderman guardian = summonGuardian(world, spawn);
+        Enderman guardian = summonGuardian(world, spawn, enderDragon);
 
         new DelayedTask(() -> {
             if (!guardian.isDead()) {
