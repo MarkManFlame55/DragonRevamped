@@ -33,7 +33,7 @@ public class TntRainAttack extends Attack {
                     tnt.setFuseTicks(fuseTicks);
                     tnt.setSource(enderDragon);
                     tnt.setIsIncendiary(true);
-                    tnt.setYield(6f);
+                    tnt.setYield(10f);
                     world.playSound(enderDragon.getLocation(), Sound.ENTITY_BLAZE_SHOOT, 3.0f, 1.0f);
                     fuseTicks = fuseTicks - TICKS_BETWEEN_TNT;
                     tntCount++;

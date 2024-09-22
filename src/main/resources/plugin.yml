@@ -3,6 +3,8 @@ version: '${version}'
 main: net.espectralgames.dragonrevamped.DragonRevamped
 api-version: '1.21'
 author: MarkManFlame_55
+description: 'Custom Dragon Fight Plugin designed for EspectralGames Comminity.'
+website: "https://github.com/MarkManFlame55/DragonRevamped"
 commands:
   dragon:
-    description: Comando principal del Dragon Revamp
+    description: Comando principal del Dragon Revamp.

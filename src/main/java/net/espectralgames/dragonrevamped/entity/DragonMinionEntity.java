@@ -6,9 +6,11 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ArmorMeta;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.trim.ArmorTrim;
 import org.bukkit.inventory.meta.trim.TrimMaterial;
 import org.bukkit.inventory.meta.trim.TrimPattern;
@@ -23,7 +25,7 @@ public class DragonMinionEntity {
         minion.getEquipment().setChestplateDropChance(0f);
         minion.getEquipment().setBoots(trimmedArmor(Material.NETHERITE_BOOTS, TrimPattern.SILENCE, TrimMaterial.QUARTZ));
         minion.getEquipment().setBootsDropChance(0f);
-        minion.getEquipment().setItemInMainHand(new ItemStack(Material.NETHERITE_SWORD));
+        minion.getEquipment().setItemInMainHand(sword(Material.NETHERITE_SWORD));
         minion.getEquipment().setItemInMainHandDropChance(0f);
 
         minion.customName(Component.text("Dragon Minion").decoration(TextDecoration.ITALIC, false));
@@ -40,6 +42,13 @@ public class DragonMinionEntity {
         ArmorTrim trim = new ArmorTrim(material, pattern);
         armorMeta.setTrim(trim);
         itemStack.setItemMeta(armorMeta);
+        return itemStack;
+    }
+    private static ItemStack sword(Material sword) {
+        ItemStack itemStack = new ItemStack(sword);
+        ItemMeta itemMeta = itemStack.getItemMeta();
+        itemMeta.addEnchant(Enchantment.SHARPNESS, 1, true);
+        itemStack.setItemMeta(itemMeta);
         return itemStack;
     }
 }

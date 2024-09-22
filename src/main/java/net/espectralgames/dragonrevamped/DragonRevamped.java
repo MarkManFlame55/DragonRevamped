@@ -13,6 +13,8 @@ public final class DragonRevamped extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         plugin = this;
+        getLogger().info("Starting PLugin");
+
 
         saveDefaultConfig();
         saveConfig();

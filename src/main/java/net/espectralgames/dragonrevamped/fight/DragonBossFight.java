@@ -37,7 +37,7 @@ public class DragonBossFight implements Listener {
     Map<Attack, Integer> stage3AttacksWeigthMap = new HashMap<>();
     boolean isFighting;
     double DRAGON_MAX_HEALTH = this.plugin.getConfig().getDouble("max-dragon-health");
-    double SPIGOT_MAX_HEALTH = this.plugin.getServer().spigot().getSpigotConfig().getDouble("settings.attribute.maxHealth");
+    double SPIGOT_MAX_HEALTH = this.plugin.getServer().spigot().getSpigotConfig().getDouble("settings.attribute.maxHealth.max");
     int ATTACK_TIMER = this.plugin.getConfig().getInt("attack-timer");
 
     int STAGE = 1;
@@ -190,6 +190,7 @@ public class DragonBossFight implements Listener {
                 maxHealth.setBaseValue(this.SPIGOT_MAX_HEALTH);
                 enderDragon.setHealth(maxHealth.getBaseValue());
             } else {
+                this.plugin.getLogger().info("Vida del Dragon: " + this.DRAGON_MAX_HEALTH + ". (Maxima permitida por el server: " + this.SPIGOT_MAX_HEALTH + ")");
                 maxHealth.setBaseValue(this.DRAGON_MAX_HEALTH);
                 enderDragon.setHealth(maxHealth.getBaseValue());
             }

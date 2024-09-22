@@ -70,7 +70,7 @@ public class SpikeAttack extends Attack {
                 world.playSound(blockDisplay.getLocation(), Sound.ENTITY_WITHER_SHOOT, 0.2f, 1.0f);
                 for (Entity entity : blockDisplay.getNearbyEntities(0.5, 3, 0.5)) {
                     if (entity instanceof LivingEntity livingEntity) {
-                        livingEntity.damage(24 , enderDragon);
+                        livingEntity.damage(30 , enderDragon);
                         livingEntity.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, Time.secondsToTicks(10), 1, false, false, false));
                         Vector launchDirection = livingEntity.getLocation().toVector().add(livingEntity.getLocation().toVector().multiply(-1));
                         launchDirection.setY(0.8);

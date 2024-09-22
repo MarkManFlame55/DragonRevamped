@@ -84,7 +84,7 @@ public class CrystalGuardianAttack extends Attack {
             team.addEntity(enderman);
         }
         enderman.customName(MiniMessage.miniMessage().deserialize("<dark_red><b>Crystal Guardian"));
-        enderman.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, PotionEffect.INFINITE_DURATION, 2, false, false, false));
+        enderman.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, PotionEffect.INFINITE_DURATION, 4, false, false, false));
         enderman.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, PotionEffect.INFINITE_DURATION, 0, false, false, false));
         enderman.setRemoveWhenFarAway(false);
         AttributeInstance maxHealth = enderman.getAttribute(Attribute.GENERIC_MAX_HEALTH);

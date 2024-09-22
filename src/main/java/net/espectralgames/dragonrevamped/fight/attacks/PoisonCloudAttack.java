@@ -32,7 +32,7 @@ public class PoisonCloudAttack extends Attack {
 
         for (Player player : players) {
             if (!player.getGameMode().isInvulnerable()) {
-                player.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, Time.secondsToTicks(5), 0));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, Time.secondsToTicks(5), 1));
                 player.showTitle(Title.title(Component.text(""), MiniMessage.miniMessage().deserialize("<gold>Corre!"), Title.Times.times(Duration.of(1, ChronoUnit.MILLIS), Duration.of(5, ChronoUnit.SECONDS), Duration.of(1, ChronoUnit.MILLIS))));
             }
         }

@@ -34,7 +34,7 @@ public class ThunderAttack extends Attack {
                     Location pos = player.getLocation();
                     if (!pos.getBlock().isLiquid()) {
                         world.strikeLightning(pos);
-                        player.damage(20, enderDragon);
+                        player.damage(24, enderDragon);
                         player.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, Time.secondsToTicks(20), 1));
                         player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Time.secondsToTicks(300), 1));
                     }
