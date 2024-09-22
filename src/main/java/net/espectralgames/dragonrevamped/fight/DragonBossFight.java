@@ -171,9 +171,11 @@ public class DragonBossFight implements Listener {
     @EventHandler
     public void onBallHit(ProjectileHitEvent e) {
         if (e.getEntity() instanceof DragonFireball fireball) {
-            World world = fireball.getWorld();
-            Location pos = fireball.getLocation();
-            world.createExplosion(pos, 3.0f);
+            if (this.isFighting && this.plugin.isCustomFight()) {
+                World world = fireball.getWorld();
+                Location pos = fireball.getLocation();
+                world.createExplosion(pos, 3.0f);
+            }
         }
     }
 
